@@ -50,7 +50,7 @@ export class KpiScaleSyncBroker implements IConfigurable {
         @Inject(PIZZAGNA_EVENT_BUS) private eventBus: EventBus<IEvent>,
         private pizzagnaService: PizzagnaService
     ) {
-        this.valuesObject = this.builder.valuesObject;
+        this.valuesObject = this.builder.valuesObject;//
     }
 
     public updateConfiguration(properties: IProperties): void {
