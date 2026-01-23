@@ -24,7 +24,7 @@ import {
     provideHttpClient,
     withInterceptorsFromDi,
 } from "@angular/common/http";
-import { NgModule } from "@angular/core";
+import { NgModule, provideZoneChangeDetection } from "@angular/core";
 import { Route, RouterModule, Routes } from "@angular/router";
 import { InMemoryCache } from "@apollo/client/core";
 import { APOLLO_OPTIONS } from "apollo-angular";
@@ -366,6 +366,7 @@ const staticRoutes: Routes = [
             deps: [HttpLink],
         },
         provideHttpClient(withInterceptorsFromDi()),
+        provideZoneChangeDetection(),
     ],
 })
 export default class SchematicModule {}

@@ -19,7 +19,12 @@
 //  THE SOFTWARE.
 
 import { provideHttpClient } from "@angular/common/http";
-import { inject, NgModule, Type } from "@angular/core";
+import {
+    inject,
+    NgModule,
+    provideZoneChangeDetection,
+    Type,
+} from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { InMemoryCache } from "@apollo/client/core";
 import { provideApollo } from "apollo-angular";
@@ -70,6 +75,7 @@ const exampleRoutes: Routes = [
                 cache: new InMemoryCache(),
             };
         }),
+        provideZoneChangeDetection(),
     ],
 })
 export default class DashboardDocsModule {}

@@ -20,7 +20,7 @@
 
 import { CommonModule, DatePipe } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
-import { NgModule } from "@angular/core";
+import { NgModule, provideZoneChangeDetection } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
 
@@ -52,6 +52,7 @@ import { AnimationsModule } from "./environments/environment";
     providers: [
         DatePipe,
         LocalFilteringDataSource,
+        provideZoneChangeDetection(),
     ],
     bootstrap: [AppComponent],
 })

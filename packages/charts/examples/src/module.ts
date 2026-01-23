@@ -19,7 +19,7 @@
 //  THE SOFTWARE.
 
 import { HttpClientModule } from "@angular/common/http";
-import { NgModule } from "@angular/core";
+import { NgModule, provideZoneChangeDetection } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 
@@ -40,6 +40,9 @@ import { AnimationsModule } from "./environments/environment";
         AnimationsModule,
         NuiDocsModule,
         NuiExpanderModule,
+    ],
+    providers: [
+        provideZoneChangeDetection(),
     ],
     declarations: [AppComponent, ChartExampleIndexComponent],
     bootstrap: [AppComponent],
