@@ -4,7 +4,6 @@ module.exports = {
         {
             files: ["*.ts"],
             parserOptions: {
-                project: ["./tsconfig.lib.json"],
                 createDefaultProgram: true,
                 projectService: true,
                 tsconfigRootDir: __dirname,
@@ -23,7 +22,6 @@ module.exports = {
         {
             files: ["*.spec.ts"],
             parserOptions: {
-                project: ["./tsconfig.spec.json"],
                 createDefaultProgram: true,
                 projectService: true,
                 tsconfigRootDir: __dirname,

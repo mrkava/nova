@@ -22,16 +22,25 @@
 
 import "zone.js"; // this needs to be first
 import "zone.js/testing"; // this needs to be second
-import { getTestBed } from "@angular/core/testing";
-import { NoopAnimationsModule } from "@angular/platform-browser/animations";
+import { NgModule, provideZoneChangeDetection } from "@angular/core";
+import { getTestBed, TestBed } from "@angular/core/testing";
+import {
+    BrowserTestingModule,
+    platformBrowserTesting,
+} from "@angular/platform-browser/testing";
 import {
     BrowserDynamicTestingModule,
     platformBrowserDynamicTesting,
 } from "@angular/platform-browser-dynamic/testing";
+import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 
-// First, initialize the Angular testing environment.
+@NgModule({
+    providers: [provideZoneChangeDetection()],
+})
+class AppTestingModule {}
+
 getTestBed().initTestEnvironment(
-    [BrowserDynamicTestingModule, NoopAnimationsModule],
+    [BrowserDynamicTestingModule, NoopAnimationsModule, AppTestingModule],
     platformBrowserDynamicTesting(),
     { teardown: { destroyAfterEach: false } }
 );

@@ -62,16 +62,17 @@ const isMouseEvent = (event: Event): event is MouseEvent =>
 /* @dynamic */
 @Component({
     selector: "nui-overlay",
-    template: ` <ng-template cdk-portal>
-        <div
-            id="nui-overlay"
-            class="nui-overlay"
-            [attr.role]="roleAttr || null"
-            [ngClass]="{ empty: empty$ | async }"
-        >
-            <ng-content></ng-content>
-        </div>
-    </ng-template>`,
+    template: `
+        <ng-template cdkPortal>
+            <div
+                id="nui-overlay"
+                class="nui-overlay"
+                [attr.role]="roleAttr || null"
+                [ngClass]="{ empty: empty$ | async }"
+            >
+                <ng-content></ng-content>
+            </div>
+        </ng-template>`,
     changeDetection: ChangeDetectionStrategy.OnPush,
     providers: [
         Overlay,

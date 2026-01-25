@@ -38,7 +38,7 @@ import { NuiButtonModule } from "../button/button.module";
     template: ` <span
         [nuiTooltip]="tooltipValue"
         [nuiTooltipDisabled]="isDisabled"
-        >Tooltip</span
+    >Tooltip</span
     >`,
     standalone: false,
 })
@@ -53,7 +53,7 @@ class TooltipTestComponent {
         [nuiTooltip]="tooltipValue"
         [nuiTooltipDisabled]="isDisabled"
         [tooltipPlacement]="position"
-        >Tooltip</span
+    >Tooltip</span
     >`,
     standalone: false,
 })

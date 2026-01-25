@@ -8,7 +8,7 @@ export const TSCONFIG_JSON = `{
         "downlevelIteration": true,
         "experimentalDecorators": true,
         "esModuleInterop": true,
-        "moduleResolution": "node",
+        "moduleResolution": "bundler",
         "importHelpers": true,
         "target": "es2020",
         "module": "es2020",

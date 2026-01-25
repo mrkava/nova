@@ -82,6 +82,7 @@ describe("components >", () => {
                     },
                 ],
                 schemas: [NO_ERRORS_SCHEMA],
+                rethrowApplicationErrors: false,
             }).compileComponents();
         }));
 

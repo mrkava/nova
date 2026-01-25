@@ -3,6 +3,7 @@
         "baseUrl": ".",
         "declaration": true,
         "module": "commonjs",
+        "moduleResolution": "node",
         "outDir": "../dist/sdk/atoms",
         "target": "es6",
         "types": ["jasmine", "jasminewd2", "node", "selenium-webdriver"]

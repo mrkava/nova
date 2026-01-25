@@ -10,7 +10,8 @@
         "paths": {
             "@nova-ui/bits": ["./src/public_api.ts"]
         },
-        "target": "ES2022"
+        "target": "ES2022",
+        "moduleResolution": "bundler"
     },
     "exclude": ["node_modules", "atoms.d.ts"],
     "extends": "../../tsconfig.main.json"
