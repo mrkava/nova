@@ -4,7 +4,7 @@
 
 ## Checklist
 
-- [ ] My code follows the [style guidelines](https://github.com/solarwinds/nova/blob/main/docs/STYLE_GUIDE.md) of this project
+- [ ] !!!My code follows the [style guidelines](https://github.com/solarwinds/nova/blob/main/docs/STYLE_GUIDE.md) of this project
 - [ ] I have performed a self-review of my code
 - [ ] I have updated [change log](https://github.com/solarwinds/nova/blob/main/docs/CHANGELOG.md)
 - [ ] I have been following [Definition of done](https://github.com/solarwinds/nova/blob/main/docs/DEFINITION_OF_DONE.md)
